@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <style>
+      body{
+                background-color: #002a3f;
+                background-position: center;
+                background-repeat: no-repeat;
+
+            }
+       .main{
+                position: absolute;
+                top: 17%;
+                left: 30%;
+                width: 460px;
+                border: 2px solid #000;
+                padding: 40px;
+                background-color: rgba(0,0,0,0.3);
+                color: #fff;
+                border-radius: 12px;
+                padding-top: 80px;
+                
+
+            }
+      #file::-webkit-file-upload-button{
+                visibility: hidden;
+            }
+            #file, input[type=submit]{
+                width: 90%;
+                height: 70px;
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 17px;
+                border: 1px solid #000;
+                letter-spacing: 2px;
+                border-radius: 5px;
+                background-color: rgba(0,0,0,0.2);
+                color: #fff;
+                transition: .5s all;
+                align-items: center;
+            }
+            #file:hover, input[type=submit]:hover{
+                cursor: pointer;
+                background-color: #002a3f;
+            }
+            h2{
+              text-align: center;
+              color: blueviolet;
+            }
+    </style>
+  </head>
+  <body><h2>AWS S3 Bucket Demo</h2>
+    <div class="main">
+        
+        <div>
+        <form method="POST" action="/upload" enctype=multipart/form-data>
+          <input type=file id="file" name=file>
+          <input type=submit value=Upload>
+        </form>
+        </div>
+        <div>
+          <h3>These are your uploaded files:</h3>
+          <p>Click on the filename to download it.</p>
+          <ul>
+            {% for item in contents %}
+              <li>
+                <a href="/download/{{ item.Key }}"> {{ item.Key }} </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+    </div>
+  </body>
+</html>

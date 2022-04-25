@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+            Create Ec2 Instance
+        </title>
+    </head>
+    <body>
+        <form action="/create" method="post" enctype="multipart/form-data">
+            <p>Image ID</p>
+            <input type="text" name="imageId">
+            <p>min Count</p>
+            <input type="text" name="minCount">
+            <p>max Count</p>
+            <input type="text" name="maxCount">
+            <p>Instance Id</p>
+            <input type="text" name="instanceType">
+            <p>Key Name</p>
+            <input type="text" name="keyName">
+            <input type="submit" name="submit"/>
+        </form>
+    </body>
+</html>

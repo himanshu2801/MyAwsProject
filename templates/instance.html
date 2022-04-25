@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            InstanceId
+        </title>
+        <style>
+            body{
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Get Instance Public IP</h3>
+        <form action="/getinstance" method="post" enctype="multipart/form-data">
+            <p>Instance Id  </p>
+            <input type="text" name="instanceidip">
+            <input type="submit" name="submit"/>
+        </form>
+        <h3>OR Terminate Instance</h3>
+        <form action="/terminateinstance" method="post" enctype="multipart/form-data">
+            <p>Instance Id  </p>
+            <input type="text" name="instanceidterminate">
+            <input type="submit" name="submit"/>
+        </form>
+        <h3>OR Stop Instance</h3>
+        <form action="/stopinstance" method="post" enctype="multipart/form-data">
+            <p>Instance Id  </p>
+            <input type="text" name="instanceidstop">
+            <input type="submit" name="submit"/>
+        </form>
+    </body>
+</html>
+

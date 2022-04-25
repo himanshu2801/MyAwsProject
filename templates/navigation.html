@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+body {
+  background-image: url('https://pbs.twimg.com/profile_images/1473756532827246593/KRgw2UkV_400x400.jpg');
+     /* Full height */
+  height: 100%;
+
+/* Center and scale the image nicely */
+
+background-repeat: no-repeat;
+background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="http://127.0.0.1:5000/createec2instance">Create EC2</a>
+  <a href="http://127.0.0.1:5000/ec2Setting">Ec2 Function</a>
+  <a href="http://127.0.0.1:5000/storage">S3 Bucket</a>
+</div>
+
+</body>
+</html>
