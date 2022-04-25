@@ -14,18 +14,18 @@ http://127.0.0.1:5000/ec2Setting -
 navigate to this endpoint here you can get the public ip address of your instance, terminate and also stop the instances by just providing the instance id
 all the function are implented in backend using boto3
 
-http://127.0.0.1:5000//getinstance - 
+http://127.0.0.1:5000/getinstance - 
 after providing the instance id in the above endpoint this endpoint will navigate to another page and shows the ip address of your ec2 instance
 
-http://127.0.0.1:5000//terminateinstance - 
+http://127.0.0.1:5000/terminateinstance - 
 after providing the instance id in the above endpoint this endpoint will navigate to another page and shows the terminated successfully message on the page
 and your ec2 instance terminated 
 
-http://127.0.0.1:5000//stopinstance - 
+http://127.0.0.1:5000/stopinstance - 
 after providing the instance id in the above endpoint this endpoint will navigate to another page and shows the stopped successfully message on the page
 and your ec2 instance stopped
 
-http://127.0.0.1:5000//storage - 
+http://127.0.0.1:5000/storage - 
 it will navigate to the html page where you can upload the file from the computer to the s3 bucket which we hardcoded in the programme i.e in my case it 
 is flaskdisk and you can also download the file from s3 bucket to your computer by just clicking on the name of the item listing on the browser
 
