@@ -48,4 +48,20 @@ How to Run -
   command - docker pull himanshuinnogeek/awsproject:1.0
   this will create the image with name himanshuinnogeek/awsproject:1.0
   now we can create the container out of it and use the above endpoints for our usage.
+  
+4 - Host the ec2 instance on aws - 
+    step 1 - create an ec2 instance with region "us-east-1" and other required information
+    step 2 - select the launched instance and in security group navigate to inbound security and add a port 5000 in it with custom tcp.
+    step 3 - connect the ec2 with command line for that select the instance and click on connect button on aws website there you can get to know how to 
+             connect through ssh 
+    step 4 - after successfully connecting to the ec2 instance pull the docker image "himanshuinnogeek/awsproject:1.0" and create the container out of                it with the command "sudo docker run -e x=<access_key> -e y=<access_secret_key> -e z='us-east-1' -i -p 5000:5000  himanshuinnogeek/awsproject:1.0".
+    step 5 - after successfully connected you can manually go through the endpoints.
+             i.e 
+    1. <ec2_publicIPAdrress>:5000/
+    2. <ec2_publicIPAdrress>:5000/ec2Setting
+    3. <ec2_publicIPAdrress>:5000/ceateec2instance
+    4. <ec2_publicIPAdrress>:5000/storage key point -> for accessing this endpoint you must have a bucket created with name "flaskdisk" on your aws 
+       account with at least one file in it since we haven't handle the error for that purpose in our project yet.
+    
+  
  
